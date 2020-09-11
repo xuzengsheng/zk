@@ -11,6 +11,7 @@
     <modules>
         <module>provide-service</module>
         <module>comsumer-service</module>
+        <module>open-feign-service</module>
     </modules>
 
     <properties>

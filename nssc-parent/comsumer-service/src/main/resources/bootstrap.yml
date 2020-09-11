@@ -2,11 +2,13 @@ server:
   port: 9001
 spring:
   application:
-    name: nacos-consumer
+    name: nacos-consumer #服务名称
+  profiles:
+    active: dev #设置启用环境  根据后缀读取nacos中相应环境的配置文件(nacos中配置文件名称为： nacos-consumer-dev  、 nacos-consumer-test、 nacos-consumer-pro )
   cloud:
     nacos:
       discovery:
-        server-addr: 127.0.0.1:8848
-      config:
-        server-addr: 127.0.0.1:8848
-        file-extension: yml
+        server-addr: 127.0.0.1:8848  #注册中心地址
+      config: #如果不配置config 默认不启用配置中心
+        server-addr: 127.0.0.1:8848  #配置中心地址
+        file-extension: yml #配置中心的文件格式
