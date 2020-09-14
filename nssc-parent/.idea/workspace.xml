@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c0d254eb-46ae-4304-8d8b-b869020b386e" name="Default Changelist" comment="" />
+    <list default="true" id="c0d254eb-46ae-4304-8d8b-b869020b386e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/provide-service/src/main/java/com/nccs/event/OrderEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provide-service/src/main/java/com/nccs/event/listener/MailListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provide-service/src/main/java/com/nccs/event/listener/SmsListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provide-service/src/main/java/com/nccs/event/listener/WeChatListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comsumer-service/target/classes/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/comsumer-service/target/classes/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provide-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provide-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provide-service/src/main/java/com/nccs/ProvideServiceApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/provide-service/src/main/java/com/nccs/ProvideServiceApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provide-service/src/main/java/com/nccs/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/provide-service/src/main/java/com/nccs/controller/TestController.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +23,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -29,14 +41,16 @@
     </option>
   </component>
   <component name="ProjectId" id="1hJEdmx4pFNL2pEYxFXHb07viro" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/comsumer-service/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -47,9 +61,12 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.nccs.event.listener" />
+      <recent name="com.nccs.feign" />
       <recent name="nccs" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\xuzengsheng\MyWorkspace\20200910\zk\nssc-parent\open-feign-service\src\main\resources" />
       <recent name="D:\xuzengsheng\MyWorkspace\nssc-parent\comsumer-service\src\main\resources" />
     </key>
   </component>
@@ -70,10 +87,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ComsumerServiceApp">
-    <configuration name="ComsumerServiceApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+  <component name="RunManager" selected="Spring Boot.OpenFeignServiceApp">
+    <configuration name="ComsumerServiceApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="comsumer-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="nccs.ComsumerServiceApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nccs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.nccs.ComsumerServiceApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OpenFeignServiceApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="open-feign-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nccs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.nccs.OpenFeignServiceApp" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -94,17 +130,20 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.ProvideServiceApp" />
+        <item itemvalue="Spring Boot.ComsumerServiceApp" />
+        <item itemvalue="Spring Boot.OpenFeignServiceApp" />
       </list>
     </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="allServicesViewState">
       <serviceView>
+        <option name="contentProportion" value="0.15289" />
         <treeState>
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@1555955a" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@2d5c9a73" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -123,10 +162,38 @@
       <option name="presentableId" value="Default" />
       <updated>1599720884424</updated>
       <workItem from="1599720887776" duration="2150000" />
+      <workItem from="1599724495666" duration="69000" />
+      <workItem from="1599730537201" duration="6828000" />
+      <workItem from="1600063080262" duration="6958000" />
     </task>
+    <task id="LOCAL-00001" summary="新增使用feign客户端调用服务demo&#10;新增从nacos配置中心读取不同环境的配置的demo">
+      <created>1599790066592</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1599790066592</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="新增使用feign客户端调用服务demo&#10;新增从nacos配置中心读取不同环境的配置的demo" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增使用feign客户端调用服务demo&#10;新增从nacos配置中心读取不同环境的配置的demo" />
   </component>
 </project>
