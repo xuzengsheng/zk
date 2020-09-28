@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: user-service
+  #数据库
+  datasource:
+    url: jdbc:mysql://localhost:3306/nccs_user?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+server:
+  port: 9001

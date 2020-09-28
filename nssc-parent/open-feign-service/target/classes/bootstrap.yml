@@ -3,13 +3,13 @@ server:
 
 spring:
   application:
-    name: nacos-feign
+    name: nacos-feign  #服务名称
   cloud:
     nacos:
       discovery:
-        server-addr: 127.0.0.1:8848
+        server-addr: 127.0.0.1:8848 #注册中心 nacos地址
 
 feign:
-  #默认是不支持的，所以这里要开启，设置为true
+  #设置熔断降级 默认为false
   hystrix:
     enabled: true
