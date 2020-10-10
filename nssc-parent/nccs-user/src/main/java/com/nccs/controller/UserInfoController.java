@@ -30,14 +30,29 @@ public class UserInfoController {
     private int port;
 
 
-    @PostMapping("/login")
-    BaseResponse login(@RequestBody UserInfo userInfo) {
+    @GetMapping("/login")
+    BaseResponse login(@RequestParam("userName") String userName, @RequestParam("password") String password) {
+        UserInfo userInfo = new UserInfo();
+        userInfo.setUserName(userName);
+        userInfo.setPassword(password);
         UserInfo user = userInfoService.login(userInfo);
         if (user == null) {
             throw new BusinessException(BaseCodeEnum.ACCOUNT_OR_PASSOWD_WRONG);
         }
         String token = UUID.randomUUID().toString(); //生成uuid作为token
         return BaseResponse.success(token);
+    }
+
+    @GetMapping("/save")
+    BaseResponse save(@RequestParam("userName") String userName, @RequestParam("password") String password) {
+        UserInfo userInfo = new UserInfo();
+        userInfo.setUserName(userName);
+        userInfo.setUserCode(userName);
+        userInfo.setPassword(password);
+        userInfo.setAge(18);
+        userInfo.setSex(0);
+        boolean save = userInfoService.save(userInfo);
+        return BaseResponse.success(save);
     }
 
     @PostMapping("/getUserInfo")
@@ -47,7 +62,7 @@ public class UserInfoController {
     }
 
     @GetMapping("/port")
-    BaseResponse getPort(){
+    BaseResponse getPort() {
         return BaseResponse.success(port);
     }
 }

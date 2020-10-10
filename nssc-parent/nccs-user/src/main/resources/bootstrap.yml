@@ -1,6 +1,8 @@
 spring:
   application:
     name: nccs-user
+  main:
+    allow-bean-definition-overriding: true  #当遇到同样名字的时候，是否允许覆盖注册
   profiles:
     active: dev #设置启用环境  根据后缀读取nacos中相应环境的配置文件(nacos中配置文件名称为： nacos-consumer-dev  、 nacos-consumer-test、 nacos-consumer-pro )
   cloud:
@@ -11,11 +13,12 @@ spring:
         server-addr: 127.0.0.1:8848
         file-extension: yml
 
-feign:
-  #设置熔断降级 默认为false
-  hystrix:
-    enabled: true
-  # 以下配置已迁移到配置中心
+#feign:
+#  #设置熔断降级 默认为false
+#  hystrix:
+#    enabled: true
+
+
 
   #数据库
 #  datasource:
@@ -49,3 +52,45 @@ feign:
 #    port: 6379
 #    password:
 
+
+
+sharding:
+  jdbc:
+    dataSource:
+      names: db0,db1,db2   #注册需要sharding管理的数据库名称
+      # 配置主库 主库只用来写  从库用来读
+      db0: #org.apache.tomcat.jdbc.pool.DataSource
+        type: com.alibaba.druid.pool.DruidDataSource
+        driverClassName: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/nccs_user?useUnicode=true&characterEncoding=utf8&tinyInt1isBit=false&useSSL=false&serverTimezone=GMT
+        username: root
+        password: root
+        #最大连接数
+        maxPoolSize: 20
+      db1: # 配置第一个从库
+        type: com.alibaba.druid.pool.DruidDataSource
+        driverClassName: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/nccs_user02?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false&serverTimezone=GMT
+        username: root
+        password: root
+        maxPoolSize: 20
+      db2: # 配置第二个从库
+        type: com.alibaba.druid.pool.DruidDataSource
+        driverClassName: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/nccs_user03?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false&serverTimezone=GMT
+        username: root
+        password: root
+        maxPoolSize: 20
+    config:
+      masterslave: # 配置读写分离
+        load-balance-algorithm-type: round_robin # 配置从库选择策略，提供轮询与随机，这里选择用轮询//random 随机 //round_robin 轮询
+        name: db0
+        master-data-source-name: db0      #指定主库
+        slave-data-source-names: db1,db2  #指定从库
+    props:
+      sql: # 开启SQL显示，默认值: false，注意：仅配置读写分离时不会打印日志！！！
+        show: true
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #开启sql日志
