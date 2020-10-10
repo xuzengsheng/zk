@@ -196,6 +196,7 @@ public class BaseResponse<T> implements Serializable {
 
     /**
      * 响应数据
+     *
      * @return
      */
     public T data() {

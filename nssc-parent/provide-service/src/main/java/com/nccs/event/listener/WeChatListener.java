@@ -20,6 +20,6 @@ public class WeChatListener implements ApplicationListener<OrderEvent> {
     @Override
 //    @Async  //异步
     public void onApplicationEvent(OrderEvent event) {
-        System.out.println(Thread.currentThread() + "...微信监听到..." + event.getMessage()+ "......" + event.getSource());
+        System.out.println(Thread.currentThread() + "...微信监听到..." + event.getMessage() + "......" + event.getSource());
     }
 }

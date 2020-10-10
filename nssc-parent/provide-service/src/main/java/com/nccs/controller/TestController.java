@@ -26,6 +26,7 @@ public class TestController {
 
     /**
      * 调用事件通知
+     *
      * @param message
      * @return
      */

@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
  * @description:
  **/
 @Data
-public class BusinessException extends RuntimeException{
+public class BusinessException extends RuntimeException {
 
     private Logger logger = LoggerFactory.getLogger(BusinessException.class);
     private String code;

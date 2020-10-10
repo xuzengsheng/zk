@@ -1,0 +1,16 @@
+
+#如果重要配置放在配置中心 则此处yml文件的文件名称必须使用 bootstrap.yml（因为优先级最高）
+
+spring:
+  application:
+    name: nccs-gateway
+  profiles:
+    active: dev #设置启用环境  根据后缀读取nacos中相应环境的配置文件(nacos中配置文件名称为： nacos-consumer-dev  、 nacos-consumer-test、 nacos-consumer-pro )
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+      config:
+        group: GATEWAY_GROUP
+        server-addr: 127.0.0.1:8848
+        file-extension: yml
