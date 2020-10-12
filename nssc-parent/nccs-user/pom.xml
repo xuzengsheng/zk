@@ -66,6 +66,22 @@
             <groupId>org.freemarker</groupId>
             <artifactId>freemarker</artifactId>
         </dependency>
+        <!--activemq 消息队列-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-activemq</artifactId>
+        </dependency>
+        <!--消息对列连接池 springboot 2.0以下版本使用此依赖-->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.activemq</groupId>-->
+<!--            <artifactId>activemq-pool</artifactId>-->
+<!--        </dependency>-->
+
+        <!--消息对列连接池 springboot 2.0以上版本使用此依赖-->
+        <dependency>
+            <groupId>org.messaginghub</groupId>
+            <artifactId>pooled-jms</artifactId>
+        </dependency>
         <!-- thymeleaf 依赖-->
         <!--        <dependency>-->
         <!--            <groupId>org.springframework.boot</groupId>-->

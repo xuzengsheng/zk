@@ -5,6 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.jms.annotation.EnableJms;
 
 /**
  * @program: nssc-parent
@@ -16,6 +17,7 @@ import org.springframework.context.annotation.ComponentScan;
 @MapperScan("com.nccs.mapper")
 @ComponentScan(value = "com.nccs.*")
 @EnableDiscoveryClient
+//@EnableJms  //启用消息队列 此注解可以不要
 public class UserServiceApp {
     public static void main(String[] args) {
         SpringApplication.run(UserServiceApp.class, args);

@@ -26,6 +26,7 @@ public class UserInfoController {
     @Autowired
     UserInfoService userInfoService;
 
+
     @Value("${server.port}")
     private int port;
 
@@ -65,4 +66,7 @@ public class UserInfoController {
     BaseResponse getPort() {
         return BaseResponse.success(port);
     }
+
+
+
 }

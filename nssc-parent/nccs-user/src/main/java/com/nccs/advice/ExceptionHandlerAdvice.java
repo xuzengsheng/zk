@@ -28,14 +28,14 @@ public class ExceptionHandlerAdvice {
     @ExceptionHandler(RuntimeException.class)
     @ResponseBody
     public BaseResponse runtimeException(RuntimeException e) {
-        logger.error("全局异常处理器捕获到RuntimeException异常：{}", e.getMessage());
+        logger.error("全局异常处理器捕获到RuntimeException异常：{}", e);
         return BaseResponse.fail(e.getMessage());
     }
 
     @ExceptionHandler(Throwable.class)
     @ResponseBody
     public BaseResponse throwable(Throwable e) {
-        logger.error("全局异常处理器捕获到Throwable异常：{}", e.getMessage());
+        logger.error("全局异常处理器捕获到Throwable异常：{}", e);
         return BaseResponse.fail(e.getMessage());
     }
 }

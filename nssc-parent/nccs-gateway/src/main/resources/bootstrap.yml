@@ -14,3 +14,12 @@ spring:
         group: GATEWAY_GROUP
         server-addr: 127.0.0.1:8848
         file-extension: yml
+
+  #activemq消息队列
+  activemq:
+    broker-url: tcp://localhost:61616
+    in-memory: true
+    pool:
+      enabled: true   #是否使用连接池 如果此处设置为true，需要加activemq-pool的依赖包，否则会自动配置失败，报JmsMessagingTemplate注入失败
+      max-connections: 10  #最大连接数
+      idle-timeout: 30000  #空闲的连接过期时间，默认为30秒
