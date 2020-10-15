@@ -11,16 +11,6 @@
 
     <artifactId>nccs-gateway</artifactId>
     <dependencies>
-        <!--服务注册与发现-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-        </dependency>
-        <!--配置中心-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
-        </dependency>
         <!--gateway网关-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

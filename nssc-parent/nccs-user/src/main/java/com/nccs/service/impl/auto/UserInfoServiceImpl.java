@@ -2,7 +2,7 @@ package com.nccs.service.impl.auto;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.nccs.custom.BaseCodeEnum;
-import com.nccs.entity.auto.UserInfo;
+import com.nccs.user.entity.UserInfo;
 import com.nccs.custom.BusinessException;
 import com.nccs.mapper.auto.UserInfoMapper;
 import com.nccs.service.auto.UserInfoService;

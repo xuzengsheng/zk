@@ -1,6 +1,6 @@
 package com.nccs.mapper.auto;
 
-import com.nccs.entity.auto.UserInfo;
+import com.nccs.user.entity.UserInfo;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

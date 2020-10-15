@@ -1,4 +1,4 @@
-package com.nccs.entity.auto;
+package com.nccs.user.entity;
 
 import java.io.Serializable;
 

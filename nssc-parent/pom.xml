@@ -12,6 +12,8 @@
         <module>nccs-common</module>
         <module>nccs-gateway</module>
         <module>nccs-user</module>
+        <module>nccs-web</module>
+        <module>nccs-domain</module>
     </modules>
 
     <properties>
@@ -22,6 +24,16 @@
     </properties>
 
     <dependencies>
+        <!--服务注册与发现-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+        <!--配置中心-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
         <!--自定义通用模块-->
         <dependency>
             <groupId>com.nccs.demo</groupId>

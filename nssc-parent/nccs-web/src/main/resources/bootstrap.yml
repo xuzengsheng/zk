@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: nccs-web
+  main:
+    allow-bean-definition-overriding: true  #当遇到同样名字的时候，是否允许覆盖注册
+  profiles:
+    active: dev #设置启用环境  根据后缀读取nacos中相应环境的配置文件(nacos中配置文件名称为： nacos-consumer-dev  、 nacos-consumer-test、 nacos-consumer-pro )
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yml
+
+
+feign:
+  #设置熔断降级 默认为false
+  hystrix:
+    enabled: true
+
+server:
+  port: 8001
