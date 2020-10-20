@@ -1,7 +1,6 @@
 package com.nccs.service;
 
 import com.nccs.influx.measurement.ActiveMqLog;
-import com.nccs.influx.utils.InfluxdbUtils;
 import org.influxdb.InfluxDB;
 import org.influxdb.dto.Point;
 import org.springframework.beans.factory.annotation.Autowired;
