@@ -106,6 +106,11 @@
             <version>2.7.0</version>
         </dependency>
         <!--swagger依赖 end-->
+        <!-- 引入influxdb数据库-->
+        <dependency>
+            <groupId>org.influxdb</groupId>
+            <artifactId>influxdb-java</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

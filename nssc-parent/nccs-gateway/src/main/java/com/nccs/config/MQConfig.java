@@ -14,7 +14,7 @@ import javax.jms.Destination;
  * @description:
  **/
 @Configuration
-public class BeanConfig {
+public class MQConfig {
 
     //定义存放消息的队列
     @Bean

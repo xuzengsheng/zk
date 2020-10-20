@@ -9,7 +9,6 @@ import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.jms.annotation.EnableJms;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
@@ -25,7 +24,6 @@ import reactor.core.publisher.Mono;
 @EnableFeignClients //开启feign客户端
 @EnableHystrix  //开启熔断降级
 @ComponentScan(value = "com.nccs.*")
-//@EnableJms  //开启消息队列 可以不添加该注解
 public class GatewayServerApp {
 
     public static void main(String[] args) {

@@ -14,7 +14,7 @@ spring:
         file-extension: yml
 
 
-#activemq消息队列
+  #activemq消息队列
   activemq:
     broker-url: tcp://localhost:61616
     in-memory: true
@@ -23,12 +23,19 @@ spring:
       max-connections: 10  #最大连接数
       idle-timeout: 30000  #空闲的连接过期时间，默认为30秒
 
+  #influx数据库
+  influx:
+    url: http://localhost:8086
+    database: dbtest
+    user: admin
+    password: admin
+
 
 
   #feign:
-#  #设置熔断降级 默认为false
-#  hystrix:
-#    enabled: true
+  #  #设置熔断降级 默认为false
+  #  hystrix:
+  #    enabled: true
 
 
 

@@ -1,6 +1,8 @@
 package com.nccs.controller;
 
 import com.nccs.custom.BaseResponse;
+import com.nccs.influx.utils.InfluxdbUtils;
+import org.influxdb.InfluxDB;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsMessagingTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,11 +24,14 @@ public class ActiveMQController {
     private JmsMessagingTemplate jmsTemplate;
 
     @Autowired
+    InfluxdbUtils influxdbUtils;
+
+    @Autowired
     private Destination destination; //注入存放的队列  com.nccs.config包下的BeanConfig中配置的bean
 
 
-    @GetMapping("/mqtest")
-    public BaseResponse test(@RequestParam("name") String message) {
+    @GetMapping("/send")
+    public BaseResponse send(@RequestParam("name") String message) {
         //方法一：添加消息到消息队列
         jmsTemplate.convertAndSend(destination, message);
         System.out.println("nccs-user发出消息：" + message);
@@ -35,4 +40,5 @@ public class ActiveMQController {
         //jmsMessagingTemplate.convertAndSend("test", name);
         return new BaseResponse("200", "消息发送成功,msg = " + message);
     }
+
 }

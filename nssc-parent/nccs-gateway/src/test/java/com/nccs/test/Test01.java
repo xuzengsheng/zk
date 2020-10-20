@@ -11,6 +11,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.Date;
 import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -25,8 +26,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class Test01 {
     @Autowired
     InfluxdbUtils influxdbUtils;
-    private static AtomicInteger atomicInteger = new AtomicInteger(0);
 
+    private static AtomicInteger atomicInteger = new AtomicInteger(0);
 
     @Test
     public void test() throws InterruptedException {
