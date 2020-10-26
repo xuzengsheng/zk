@@ -199,6 +199,16 @@ public class RedBlackTree<K extends Comparable<K>, V> {
         tree.add("A","1");
         tree.add("B","2");
         tree.add("a","3");
+        tree.add("c","4");
+        tree.add("d","5");
+        tree.add("e","6");
+        tree.add("f","7");
+        tree.add("g","8");
+        tree.add("h","9");
+        tree.add("i","10");
+        tree.add("j","11");
+        tree.add("k","12");
+        tree.add("l","13");
     }
 
 }
