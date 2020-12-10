@@ -1,8 +1,6 @@
 package com.nccs.controller;
 
 import com.nccs.custom.BaseResponse;
-import com.nccs.influx.utils.InfluxdbUtils;
-import org.influxdb.InfluxDB;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsMessagingTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.jms.Destination;
-import javax.swing.*;
 
 /**
  * @program: nssc-parent
@@ -22,9 +19,6 @@ import javax.swing.*;
 public class ActiveMQController {
     @Autowired // 也可以注入JmsTemplate，JmsMessagingTemplate对JmsTemplate进行了封装
     private JmsMessagingTemplate jmsTemplate;
-
-    @Autowired
-    InfluxdbUtils influxdbUtils;
 
     @Autowired
     private Destination destination; //注入存放的队列  com.nccs.config包下的BeanConfig中配置的bean
